@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness & Nutrition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fitness.css" />
+</head>
+<body>
+
+  <h1>Fitness & Nutrition</h1>
+  <div class="intro-text">
+    <p>
+      Click a muscle group to explore exercises and learn how to perform them. Visual guides and simple instructions to get you started.
+    </p>
+  </div>
+
+  <div class="btn-group">
+    <button class="muscle-btn" onclick="loadExercises('chest')">Chest</button>
+    <button class="muscle-btn" onclick="loadExercises('back')">Back</button>
+    <button class="muscle-btn" onclick="loadExercises('shoulders')">Shoulders</button>
+    <button class="muscle-btn" onclick="loadExercises('legs')">Legs</button>
+    <button class="muscle-btn" onclick="loadExercises('arms')">Arms</button>
+    <button class="muscle-btn" onclick="loadExercises('cardio')">Cardio</button>
+  </div>
+
+  <div class="exercise-list" id="exerciseList">
+    <!-- Exercises will load here -->
+  </div>
+  <div class="back-home">
+  <a href="home.html" class="btn-home">← Back to Home</a>
+</div>
+
+
+  <script src="fitness.js"></script>
+
+</body>
+</html>  

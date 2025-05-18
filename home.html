@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooted Vitality</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="assets/img/logo.png" alt="Rooted Vitality Logo">
+        <span>Rooted Vitality</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#contact">Get in touch</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </nav>
+
+  <main>
+    <header class="video-hero">
+      <video id="bgVideo" autoplay muted playsinline></video>
+      <div class="hero-content">
+        <h1>Rooted Vitality</h1>
+        <p>Where Nature Fuels Strength</p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn">Start Your Wellness Plan</a>
+          <a href="#shop" class="btn">Shop Farm Fresh Goods</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>Meet Your Coach</h2>
+      <p>Hi, I’m [Your Name] — fitness & nutrition expert, farmer, and website designer. I help people build stronger, healthier lives with nature-powered nutrition, personalized fitness plans, and purpose-driven digital design.</p>
+      <a href="#contact" class="btn">Book a Free Discovery Call</a>
+    </section>
+
+    <section id="services">
+  <h2>What I Offer</h2>
+  <div class="three-columns">
+    
+    <a href="fitness.html" class="column">
+      <h3>Fitness & Nutrition</h3>
+      <p>Personal plans to help you get fit and feel amazing.</p>
+    </a>
+
+    <a href="farm.html" class="column">
+      <h3>Farm Goods</h3>
+      <p>Order natural produce and detox boxes from my farm.</p>
+    </a>
+
+    <a href="web.html" class="column">
+      <h3>Web Design</h3>
+      <p>Need a site like this? I design for coaches and creators.</p>
+    </a>
+
+  </div>
+</section>
+
+
+    <section id="shop">
+      <h2>Featured Products</h2>
+      <div class="products">
+        <div><h4>Farm-to-Fit Pack</h4><p>Healthy food, direct from the farm.</p></div>
+        <div><h4>30-Day Fitness Plan</h4><p>Custom workouts and meal guidance.</p></div>
+        <div><h4>Wellness Website</h4><p>Personal brand website built for wellness experts.</p></div>
+      </div>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Get in Touch</h2>
+      <div class="card-container" id="formCard">
+        <div class="card-flip">
+          <div class="card-front">
+            <form id="contactForm" class="contact-form">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+          <div class="card-back">
+            <div class="thank-you-msg">
+              <div id="thankText" class="thank-you-animated">
+                <span>T</span><span>h</span><span>a</span><span>n</span><span>k</span>
+                <span>&nbsp;</span>
+                <span>Y</span><span>o</span><span>u</span><span>!</span>
+              </div>
+              <p id="thankMsg" class="thank-you-detail">
+                We’ve received your message.<br>
+                We’ll get back to you soon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Rooted Vitality. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="assets/img/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="assets/img/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <img src="assets/img/whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="mailto:your@email.com" aria-label="Email">
+          <img src="assets/img/email.png" alt="Email">
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <img src="assets/img/youtube.png" alt="YouTube">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="navbar.js"></script>
+  <script src="contact-form.js"></script>
+</body>
+</html>
