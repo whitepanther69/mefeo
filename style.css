@@ -288,7 +288,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
   }
-  nav-links li {
+ .nav-links li {
     width: 100%;
     text-align: center;
   }
