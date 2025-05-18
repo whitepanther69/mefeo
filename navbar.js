@@ -5,7 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   hamburger.addEventListener("click", () => {
     navLinksList.classList.toggle("show");
+    // Close mobile menu when any nav link is clicked
+    const navLinkItems = document.querySelectorAll(".nav-links li a");
+
+    navLinkItems.forEach(link => {
+    link.addEventListener("click", () => {
+    navLinksList.classList.remove("show");
   });
+});
+});
 
   // VIDEO ROTATION
   const video = document.getElementById("bgVideo");
