@@ -90,6 +90,11 @@ section {
   text-align: center;
   scroll-margin-top: 100px; /* adjust to your navbar height */
 }
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 140px; /* more margin for mobile */
+  }
+}
 
 .three-columns {
   display: flex;
@@ -112,7 +117,6 @@ section {
   font-family: 'Inter', sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
 
 
 .column:hover {
@@ -500,4 +504,18 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.btn.active,
+.nav-links li a.active {
+background-color: #c62828; /* deep red */
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 999px; /* creates pill shape */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(198, 40, 40, 0.3);
+} 
+.nav-links li a:hover {
+  background-color: #e53935;
+  color: white;
+  border-radius: 999px;
 }
