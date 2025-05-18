@@ -1,3 +1,21 @@
+// Activate muscle buttons
+const buttons = document.querySelectorAll(".muscle-btn");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", function () {
+    // Remove red from all
+    buttons.forEach(b => b.classList.remove("active"));
+    
+    // Make this one red
+    this.classList.add("active");
+
+    // Load exercises
+    const muscle = this.dataset.muscle;
+    loadExercises(muscle);
+  });
+});
+
+// Load exercises by body part from API
 async function loadExercises(bodyPart) {
   const list = document.getElementById('exerciseList');
   list.innerHTML = '<p>Loading exercises...</p>';
@@ -41,3 +59,42 @@ async function loadExercises(bodyPart) {
     list.innerHTML = '<p style="color:red;">Failed to load exercises. Please try again later.</p>';
   }
 }
+const form = document.getElementById('contactForm');
+const cardContainer = document.getElementById('formCard');
+const thankText = document.getElementById('thankText');
+const thankMsg = document.getElementById('thankMsg');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch('form-handler.php', {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => response.text())
+    .then(data => {
+      console.log("✅ Form sent:", data);
+
+      cardContainer.classList.add('card-flipped');
+
+      thankText.classList.remove('animate-in');
+      thankMsg.classList.remove('fade-in');
+
+      setTimeout(() => {
+        thankText.classList.add('animate-in');
+        thankMsg.classList.add('fade-in');
+      }, 300);
+
+      setTimeout(() => {
+        cardContainer.classList.remove('card-flipped');
+        thankText.classList.remove('animate-in');
+        thankMsg.classList.remove('fade-in');
+        form.reset();
+      }, 6000);
+    })
+    .catch(err => {
+      console.error("❌ Error:", err);
+    });
+});
