@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Plan Form</title>
+  <link rel="stylesheet" href="fitness.css" />
+</head>
+<body>
+
+  <h1>Get Your Personalized Fitness Plan</h1>
+
+  <form class="fitness-form" action="submit-form.php" method="POST">
+    <label>Name:
+      <input type="text" name="name" required />
+    </label>
+    <label>Email:
+      <input type="email" name="email" required />
+    </label>
+    <label>Age:
+      <input type="number" name="age" required />
+    </label>
+    <label>Fitness Goal:
+      <select name="goal" required>
+        <option value="">Choose your goal</option>
+        <option value="weight_loss">Weight Loss</option>
+        <option value="muscle_gain">Muscle Gain</option>
+        <option value="flexibility">Flexibility</option>
+        <option value="endurance">Endurance</option>
+      </select>
+    </label>
+    <label>Health notes or limitations:
+      <textarea name="health_notes" rows="4"></textarea>
+    </label>
+    <button type="submit">Send</button>
+  </form>
+ <div class="back-home">
+  <a href="index.html" class="btn-home">← Back to Home</a>
+</div>
+
+
+  <script src="fitness.js"></script>
+  <script src="contact-form.js"></script>
+</body>
+</html>
