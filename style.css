@@ -105,26 +105,51 @@ section {
 }
 
 .column {
-  flex: 1 1 280px;
-  max-width: 300px;
+  flex: 1 1 380px;
+  max-width: 400px;
+  
   background: #ffffff;
   padding: 25px 20px;
-  border-radius: 16px;
-  outline: 1px solid rgba(0, 100, 0, 0.15);
-  border: 2px solid rgba(34, 139, 34, 0.25); /* strong green-grey border */
-  box-shadow: 0 8px 18px rgba(56, 142, 60, 0.12); /* more depth */
+  border-radius: 20px;
+  outline: 1px solid rgba(34, 139, 34, 0.2);
+  border: 2px solid rgba(139, 69, 19, 0.15); /* soft brown edge */
+  box-shadow:
+    0 8px 20px rgba(101, 67, 33, 0.2),      /* deep brown */
+    0 12px 40px rgba(0, 0, 0, 0.05),        /* soft drop */
+    inset 0 -2px 5px rgba(101, 67, 33, 0.08); /* inner warmth */
   text-align: center;
   font-family: 'Inter', sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
 
 .column:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(56, 142, 60, 0.2); /* goldish hint */
   border-color: #81c784; /* soft green highlight */
 }
+.column h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1b5e20;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 60, 0, 0.1);
+}
 
+.column p {
+  font-size: 1rem;
+  color: #333;
+  text-shadow: 0.5px 0.5px 1px rgba(60, 30, 10, 0.08);
+  line-height: 1.6;
+}
+.card-icon {
+  width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2)); /* Optional shadow */
+}
 
 
 .products,
@@ -367,19 +392,23 @@ a {
 /*============Get in touch----Form=======*/
 .contact-section {
  background: rgba(0, 100, 0, 0.08);
-  padding: 60px 20px;
-  text-align: center;
+  padding: 20px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center; 
+  position: relative;
+  z-index: 1;
 }
 
 .contact-section h2 {
   color: #064d00;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .card-container {
   width: 100%;
-  max-width: 500px;
-  margin: 40px auto 0;
+  max-width: 600px;
+  margin: 30px auto 0;
   perspective: 1000px;
   position: relative;
 }
@@ -513,4 +542,11 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+#about {
+  padding: 100px 20px 60vh;  /* 🟢 push bottom content far enough */
+  scroll-margin-top: 80px;   /* 🟢 make anchor stop under navbar */
+  background: #f4fdf4;
+  text-align: center;
 }
