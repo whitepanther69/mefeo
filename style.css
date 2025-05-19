@@ -31,6 +31,8 @@ body {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
+  object-position: center center;
+  transform: scale(1.2); /* Adjust zoom
   z-index: 0;
 }
 
@@ -46,6 +48,12 @@ body {
   color: white;
   padding: 20px;
   background: rgba(0, 0, 0, 0.2); /* optional dark overlay */
+}
+@media (max-width: 768px) {
+  .video-hero video {
+    transform: scale(1.4);
+    object-position: center 30%;
+  }
 }
 
 .hero-content h1 {
