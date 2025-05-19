@@ -89,3 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+@media (max-width: 768px) {
+  .video-hero video {
+    transform: scale(1.4);
+    object-position: center 30%;
+  }
+}
