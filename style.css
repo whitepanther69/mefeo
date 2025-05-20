@@ -31,11 +31,8 @@ body {
   min-width: 100%;
   min-height: 100%;
   object-fit: contain;
-  object-position: center center;
-  transform: scale(1.2); /* Adjust zoom
   z-index: 0;
 }
-
 .hero-content {
   position: relative;
   z-index: 1;
@@ -80,7 +77,18 @@ body {
   transform: scale(1.04);
   box-shadow: 0 6px 14px rgba(198, 40, 40, 0.3); /* red glow */
 }
-
+#bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* or use "contain" to fit without cropping */
+  z-index: -1;
+}
+#bgVideo {
+  transform: scale(0.7); /* 0.8 = zoom out, 1.2 = zoom in */
+}
 
 
 /* === SECTIONS === */
