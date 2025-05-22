@@ -2,44 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fitness Plan Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rooted Vitality</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="fitness.css" />
 </head>
 <body>
 
-  <h1>Get Your Personalized Fitness Plan</h1>
+  <!-- === FORM + IMAGES SECTION === -->
+  <section class="form-layout">
+    <!-- Left Image -->
+    <div class="image-side">
+      <img src="assets/img/coach2.jpg" alt="Fitness Coach Left" class="side-img">
+    </div>
 
-  <form class="fitness-form" action="submit-form.php" method="POST">
-    <label>Name:
-      <input type="text" name="name" required />
-    </label>
-    <label>Email:
-      <input type="email" name="email" required />
-    </label>
-    <label>Age:
-      <input type="number" name="age" required />
-    </label>
-    <label>Fitness Goal:
-      <select name="goal" required>
-        <option value="">Choose your goal</option>
-        <option value="weight_loss">Weight Loss</option>
-        <option value="muscle_gain">Muscle Gain</option>
-        <option value="flexibility">Flexibility</option>
-        <option value="endurance">Endurance</option>
-      </select>
-    </label>
-    <label>Health notes or limitations:
-      <textarea name="health_notes" rows="4"></textarea>
-    </label>
-    <button type="submit">Send</button>
-  </form>
- <div class="back-home">
-  <a href="index.html" class="btn-home">← Back to Home</a>
-</div>
+    <!-- Form Center -->
+    <div class="form-center">
+      <h1 class="form-title">Get Your Personalized Fitness Plan</h1>
+      <form id="contactForm" class="fitness-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-  <script src="fitness.js"></script>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="goal">Fitness Goal:</label>
+        <select id="goal" name="goal" required>
+          <option value="">Choose your goal</option>
+          <option value="weight_loss">Weight Loss</option>
+          <option value="muscle_gain">Muscle Gain</option>
+          <option value="flexibility">Flexibility</option>
+          <option value="endurance">Endurance</option>
+        </select>
+
+        <label for="health_notes">Health notes or limitations:</label>
+        <textarea id="health_notes" name="health_notes" rows="3"></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="back-home">
+        <a href="index.html" class="btn-home">← Back to Home</a>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="image-side">
+      <img src="assets/img/coach3.jpg" alt="Fitness Coach Right" class="side-img">
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <div class="footer-inner">
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <img src="assets/img/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/@meinstagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <img src="assets/img/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@mefeofrancis2" target="_blank" rel="noopener noreferrer">
+      <img src="assets/img/tiktok.png" alt="TikTok">
+    </a>
+    <a href="mailto:your@email.com" aria-label="Email">
+      <img src="assets/img/email.png" alt="Email">
+    </a>
+    <a href="https://www.youtube.com/@mefeoacademy" target="_blank" rel="noopener noreferrer">
+      <img src="assets/img/youtube.png" alt="YouTube">
+    
+        </a>
+      </div>
+      <p>© 2025 Rooted Vitality. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="navbar.js"></script>
   <script src="contact-form.js"></script>
 </body>
 </html>
