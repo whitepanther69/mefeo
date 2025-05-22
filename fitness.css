@@ -7,7 +7,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #2e7d32;
+  color: #0e1c0e;
 }
 
 .intro-text,
@@ -48,6 +48,8 @@ p {
   box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4);
 }
 
+
+
 .btn-home {
   background: linear-gradient(to right, #2e7d32, #43a047);
   color: white;
@@ -63,9 +65,9 @@ p {
 }
 
 .btn-home:hover {
-  background: linear-gradient(to right, #43a047, #2e7d32);
+  background: linear-gradient(to right, #c62828, #e53935); /* red gradient */
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 100, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4); /* red glow */
 }
 
 .btn.active,
@@ -152,63 +154,120 @@ p {
 }
 
 /* ---------- Fitness Form ---------- */
+
+/* ---------- FITNESS FORM STYLING ---------- */
+/* === FULLSCREEN FLEX LAYOUT === */
+.form-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 100vh; /* Fill full screen */
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* === IMAGE COLUMNS === */
+.image-side {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* === FORM CENTER === */
+.form-center {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 40%;
+  padding: 0 25px; /* add spacing on both sides */
+}
+
+
+
 .form-title {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #09130a;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
+/* === FORM === */
 .fitness-form {
-  background: #fff;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 30px 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 100, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.fitness-form .form-group {
-  margin-bottom: 20px;
-}
-
-.fitness-form label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #333;
-}
-
+/* === INPUTS === */
 .fitness-form input,
 .fitness-form select,
 .fitness-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
+  padding: 8px 10px;
   font-size: 1rem;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.fitness-form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.fitness-form button {
+  border: 1px solid #ccc;
+  border-radius: 6px;
   width: 100%;
-  padding: 14px;
-  background: #2e7d32;
+}
+
+.fitness-form label {
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+/* === BUTTONS === */
+.btn {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #2e7d32;
   color: white;
-  border: none;
-  border-radius: 8px;
   font-weight: bold;
-  font-size: 1rem;
-  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-.fitness-form button:hover {
-  background: #388e3c;
-  transform: translateY(-2px);
+.btn-home {
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .form-layout {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .image-side,
+  .form-center {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .side-img {
+    max-height: 300px;
+  }
+
+  .btn-home {
+    margin-bottom: 20px;
+  }
 }
