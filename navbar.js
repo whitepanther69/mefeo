@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinksList.classList.remove("show");
   });
 });
+
 });
 
   // VIDEO ROTATION
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "assets/video/video2.mp4",
     "assets/video/video3.mp4",
     "assets/video/video4.mp4",
-    "assets/video/video5.mp4"
+     "assets/video/video5.mp4"
   ];
   let index = 0;
 
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ========== ACTIVE CLASS ON CLICK ==========
-  const allActiveTargets = document.querySelectorAll(".btn, .btn-home, .nav-links li a");
+  
 
   allActiveTargets.forEach(el => {
     el.addEventListener("click", function (e) {
@@ -82,13 +83,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (href && href.startsWith("#")) {
         e.preventDefault();
         const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
+        if (href && href.startsWith("#")) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        const offset = 70; // adjust to match your navbar height
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: targetPosition - offset, behavior: "smooth" });
+
+
         }
       }
     });
   });
 });
-
-  
-
